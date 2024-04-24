@@ -14,7 +14,14 @@ News Apps List To Show News And Searching Using News APi ini branch master
 
 
 Screenshoot Apps
-![WhatsApp Image 2024-04-25 at 00 49 02](https://github.com/hardigerz/NewsAppCoba/assets/31538507/fcacf67d-625b-4464-b5ec-cf8de2b41f5b)
+![WhatsApp Image 2024-04-25 at 01 18 54](https://github.com/hardigerz/NewsAppCoba/assets/31538507/024c8e76-f4df-4762-870f-7a3626087a55)
+
+Demo Apps
+
+https://github.com/hardigerz/NewsAppCoba/assets/31538507/5aad724e-cdd2-4ecb-ac0d-ca0f33c9e6e3
+
+
+
 
 
 Demo Apps
