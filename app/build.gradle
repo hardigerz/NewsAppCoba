@@ -16,11 +16,19 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
-
+        def localPropertiesFile = rootProject.file("local.properties")
+        def localProperties = new Properties()
+        localProperties.load(new FileInputStream(localPropertiesFile))
+        buildConfigField "String", "API_KEY", localProperties['apiKey']
+        buildConfigField "String", "API_URL", "\"https://newsapi.org/v2/\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
         }
+
+    }
+    buildFeatures {
+        buildConfig true
     }
 
     buildTypes {
@@ -108,5 +116,8 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:2.5.2"
+
+    def okHttp_interceptor_version = "5.0.0-alpha.2"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp_interceptor_version"
 
 }

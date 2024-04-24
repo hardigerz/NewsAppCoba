@@ -18,8 +18,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.newsappcoba.presentation.Dimens.MediumPadding2
-import com.example.newsappcoba.presentation.Dimens.PageIndicatorWidth
+import com.example.newsappcoba.utils.Dimens.MediumPadding2
+import com.example.newsappcoba.utils.Dimens.PageIndicatorWidth
 import com.example.newsappcoba.presentation.common.NewsButton
 import com.example.newsappcoba.presentation.common.NewsTextButton
 import com.example.newsappcoba.presentation.onboarding.components.OnBoardingPage

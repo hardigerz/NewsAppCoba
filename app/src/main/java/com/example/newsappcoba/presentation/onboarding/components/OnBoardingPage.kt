@@ -18,8 +18,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.newsappcoba.R
-import com.example.newsappcoba.presentation.Dimens.MediumPadding1
-import com.example.newsappcoba.presentation.Dimens.MediumPadding2
+import com.example.newsappcoba.utils.Dimens.MediumPadding1
+import com.example.newsappcoba.utils.Dimens.MediumPadding2
 import com.example.newsappcoba.presentation.onboarding.Page
 import com.example.newsappcoba.presentation.onboarding.pages
 import com.example.newsappcoba.ui.theme.NewsAppCobaTheme
