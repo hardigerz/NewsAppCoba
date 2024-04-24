@@ -25,12 +25,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.newsappcoba.R
 import com.example.newsappcoba.presentation.common.ArticleList
-import com.example.newsappcoba.presentation.onboarding.navgraph.Route
+import com.example.newsappcoba.presentation.common.SearchBar
 import com.example.newsappcoba.utils.Dimens.MediumPadding1
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun HomeScreen(article: LazyPagingItems<Article>, navigate: (String) -> Unit) {
+fun HomeScreen(
+    article: LazyPagingItems<Article>,
+    navigateToSearch: () -> Unit,
+    navigateToDetails: (Article) -> Unit
+) {
     val titles by remember {
         derivedStateOf {
             if (article.itemCount > 10) {
@@ -59,6 +63,17 @@ fun HomeScreen(article: LazyPagingItems<Article>, navigate: (String) -> Unit) {
         )
         Spacer(modifier = Modifier.height(MediumPadding1))
 
+        SearchBar(
+            modifier = Modifier
+                .padding(horizontal = MediumPadding1)
+                .fillMaxWidth(),
+            text = "",
+            readOnly = true,
+            onValueChange = {},
+            onSearch = {},
+            onClick = navigateToSearch
+        )
+
         Text(
             text = titles, modifier = Modifier
                 .fillMaxWidth()
@@ -70,9 +85,9 @@ fun HomeScreen(article: LazyPagingItems<Article>, navigate: (String) -> Unit) {
         Spacer(modifier = Modifier.height(MediumPadding1))
 
         ArticleList(
-            modifier =Modifier.padding(horizontal = MediumPadding1),
-            article = article, onClick = {
-            navigate(Route.DetailsScreen.route)
-        })
+            modifier = Modifier.padding(horizontal = MediumPadding1),
+            article = article,
+            onClick = navigateToDetails
+        )
     }
 }

@@ -12,6 +12,7 @@ import com.example.newsappcoba.domain.usecase.app_entry.ReadAppEntry
 import com.example.newsappcoba.domain.usecase.app_entry.SaveAppEntry
 import com.example.newsappcoba.domain.usecase.news.GetNews
 import com.example.newsappcoba.domain.usecase.news.NewsUseCases
+import com.example.newsappcoba.domain.usecase.news.SearchNews
 import com.example.newsappcoba.remote.NewsApi
 import com.example.newsappcoba.utils.Constant.CONNECT_TIMEOUT
 import com.example.newsappcoba.utils.Constant.READ_TIMEOUT
@@ -84,7 +85,8 @@ object AppModule {
     @Singleton
     fun provideNewsUseCase(newsRepository: NewsRepository) : NewsUseCases{
         return  NewsUseCases(
-            getNews = GetNews(newsRepository)
+            getNews = GetNews(newsRepository),
+            searchNews = SearchNews(newsRepository)
         )
     }
 }

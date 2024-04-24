@@ -11,4 +11,5 @@
     <color name="body">#B0B3B8</color>
     <color name="shimmer">#414243</color>
     <color name="placeholder">#DDDDDD</color>
+    <color name="input_background">#fff</color>
 </resources>
